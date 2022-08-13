@@ -1,0 +1,75 @@
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+/* HEADER */
+/* .nav-link{
+    padding: 0 0;
+} */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+.navbar-brand i{
+    color: #35a22c;
+}
+/* Trước Hover */
+#portNavbar .nav-link::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #35a22c;
+    display: block;
+    transition: all 0.5s;
+}
+/* Sau Hover */
+#portNavbar .nav-link:hover::after{
+    width: 100%;
+}
+#portNavbar .active .nav-link::after{
+    width: 100%;
+}
+/* CAROUSEL */
+/* B1: chỉnh kích thước avt
+B2: chỉnh hình nền (height)
+B3: chỉnh caption ở giữa carousel
+B4: chỉnh hình dạng carousel */
+/* B1: */
+.portAvatar{
+    width: 140px;
+    border-radius: 50%;
+}
+/* B2: */
+
+#portCarouselID .carousel-item{
+    /* 100vh luôn có % bằng với khung trình duyệt không tâm cha con */
+    height: 100vh;
+}
+#portCarouselID .carousel-item>img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+#portCarouselID .carousel-caption{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* B4:*/
+#portCarouselID .carousel-indicators li{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+#portCarouselID .carousel-indicators li.active{
+    background-color: #35a22c;
+}
